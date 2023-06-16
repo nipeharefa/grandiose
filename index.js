@@ -72,6 +72,7 @@ module.exports = {
   isSupportedCPU: addon.isSupportedCPU,
   receive: addon.receive,
   send: addon.send,
+  initialize: addon.initialize,
   COLOR_FORMAT_BGRX_BGRA, COLOR_FORMAT_UYVY_BGRA,
   COLOR_FORMAT_RGBX_RGBA, COLOR_FORMAT_UYVY_RGBA,
   COLOR_FORMAT_BGRX_BGRA_FLIPPED, COLOR_FORMAT_FASTEST,

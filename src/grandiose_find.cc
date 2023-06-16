@@ -218,6 +218,17 @@ napi_status makeNativeSource(napi_env env, napi_value source, NDIlib_source_t *r
   return napi_ok;
 }
 
+napi_value initialize(napi_env env, napi_callback_info info) {
+  napi_status status;
+
+  bool ok = NDIlib_initialize();
+  napi_value result;
+  status = napi_get_boolean(env, ok, &result);
+  CHECK_STATUS;
+
+  return result;
+}
+
 /* makeNativeSource usage example
 NDIlib_source_t* fred = new NDIlib_source_t();
 c->status = makeNativeSource(env, item, fred);
