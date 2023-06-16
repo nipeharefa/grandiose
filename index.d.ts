@@ -127,6 +127,9 @@ export function receive(params: {
   name?: string
 }): Promise<Receiver>
 
+
+export function isSupportedCPU(): boolean
+export function initialize(): void
 export function send(params: {
   name: string
   groups?: string | string[]
